@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "DB.NAME",
+    "type": "java.lang.String",
+    "description": "A description for 'DB.NAME'"
+  },
+  {
+    "name": "DB.TYPE",
+    "type": "java.lang.String",
+    "description": "A description for 'DB.TYPE'"
+  },
+  {
+    "name": "DB.USER",
+    "type": "java.lang.String",
+    "description": "A description for 'DB.USER'"
+  },
+  {
+    "name": "DB.PASS",
+    "type": "java.lang.String",
+    "description": "A description for 'DB.PASS'"
+  },
+  {
+    "name": "DB.URL",
+    "type": "java.lang.String",
+    "description": "A description for 'DB.URL'"
+  },
+  {
+    "name": "DB.DRIVER",
+    "type": "java.lang.String",
+    "description": "A description for 'DB.DRIVER'"
+  },
+  {
+    "name": "entitymanager.packagesToScan",
+    "type": "java.lang.String",
+    "description": "A description for 'entitymanager.packagesToScan'"
+  }
+]}

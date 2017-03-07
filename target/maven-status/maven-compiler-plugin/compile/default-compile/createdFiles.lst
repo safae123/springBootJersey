@@ -1,0 +1,12 @@
+com\client\GestionClientApplication.class
+com\client\service\ClientService.class
+com\client\configs\ConfigurationData.class
+com\client\dao\ClientDao.class
+com\client\controller\GestionClientController.class
+com\client\controller\JerseyConfig.class
+com\client\ServletInitializer.class
+com\client\dao\ClientDaoIpml.class
+com\client\dao\genericDaoImpl.class
+com\client\model\Client.class
+com\client\service\ClientServiceImpl.class
+com\client\dao\GenericDao.class
