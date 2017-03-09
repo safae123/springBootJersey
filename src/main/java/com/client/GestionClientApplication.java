@@ -5,7 +5,9 @@ import org.glassfish.jersey.servlet.ServletProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -18,7 +20,7 @@ import com.client.controller.JerseyConfig;
 @Controller
 @EnableAutoConfiguration
 @ComponentScan({"com.client"})
-public class GestionClientApplication {
+public class GestionClientApplication extends SpringBootServletInitializer {
 
 	
 	@RequestMapping("/")
@@ -27,8 +29,18 @@ public class GestionClientApplication {
         return "Hello World!";
     }
 	public static void main(String[] args) {
-		SpringApplication.run(GestionClientApplication.class, args);
+		//SpringApplication.run(GestionClientApplication.class, args);
+		configureApplication(new SpringApplicationBuilder()).run(args);
 	}
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return configureApplication(application);
+	}
+	
+	private static SpringApplicationBuilder configureApplication(SpringApplicationBuilder builder) {
+	        return builder.sources(GestionClientApplication.class);
+    }
+	
 	@Bean
 	public ServletRegistrationBean jerseyServlet() {
 	    ServletRegistrationBean registration = new ServletRegistrationBean(new ServletContainer(), "/rest/*");
